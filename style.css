@@ -1,0 +1,71 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url("https://texturelabs.org/wp-content/uploads/Texturelabs_Sky_143S.jpg");
+  background-size: cover;
+  color: azure;
+  margin: 0;
+  padding: 20px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header, #footer {
+  text-align: center;
+  width: 100%;
+}
+
+.important-text {
+  font-family: 'Mountains of Christmas', cursive;
+  color: #5bc0de;
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  text-shadow: 0 0 10px rgba(91, 192, 222, 0.5);
+}
+
+#date {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+#tree-container {
+  position: relative;
+  width: 100rem;
+  margin: 2rem auto;
+}
+
+#tree {
+  width: 100%;
+  display: block;
+  z-index: 0;
+}
+
+
+@keyframes twinkle {
+  0% { opacity: 0.8; transform: translateX(-50%) scale(1); }
+  100% { opacity: 1; transform: translateX(-50%) scale(1.15); text-shadow: 0 0 30px gold; }
+}
+
+#decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ornament {
+  position: absolute;
+  height: 5rem; /* Normal size */
+  pointer-events: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.ornament:hover {
+  transform: scale(1.3);
+}
